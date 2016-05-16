@@ -27,15 +27,12 @@ function initAddPanel() {
 		opener.on('click', function(e) {
 			e.preventDefault();
 			target.toggleClass(activeClass);
-			win.trigger('resizeHandler').trigger('resize');
+			win.trigger('resize');
 		});
 		close.on('click', function(e) {
 			e.preventDefault();
 			target.removeClass(activeClass);
 		});
-	});
-	win.on('resizeHandler', function() {
-		// console.log(11212);
 	});
 }
 
