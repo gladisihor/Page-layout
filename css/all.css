@@ -1,0 +1,359 @@
+*{max-height:10000px;}
+body{min-width:320px;}
+img{max-width:100%;}
+button::-moz-focus-inner{
+	padding:0;
+	border:0;
+}
+input[type="image"]{padding:0;border:none;}
+input[type=email], input[type=tel], input[type=search], input[type=url], input[type=text], input[type=password], input[type=file], input[type=submit], textarea{-webkit-appearance:none;}
+input[type="search"]::-webkit-search-cancel-button{-webkit-appearance: none;}
+@-webkit-viewport{width:device-width;}
+@-moz-viewport{width:device-width;}
+@-ms-viewport{width:auto !important;}
+@viewport{width:device-width;}
+#wrapper{
+	display:table;
+	table-layout:fixed;
+	position:relative;
+	width:100%;
+	height:100vh;
+	min-height:400px;
+	border-collapse:collapse;
+}
+#header,
+#footer{
+	position:relative;
+	z-index:2;
+	color:#fff;
+	background:#333;
+}
+#header{
+	display:table-header-group;
+	height:1%;
+}
+.header-holder{
+	overflow:hidden;
+	padding:5px 0;
+}
+.header-holder a{color:inherit;}
+.logo{
+	float:left;
+	margin:5px;
+}
+#nav{
+	float:right;
+}
+#nav ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#nav li{
+	float:left;
+	margin:5px 6px;
+}
+.add-nav{
+	overflow:hidden;
+	padding:5px;
+	color:#333;
+	border-bottom:1px solid #999;
+	background:#eee;
+}
+.add-nav ul{
+	float:left;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.add-nav li{
+	float:left;
+	margin:5px 8px;
+}
+.add-nav .btn{float:right;}
+.message-panel{
+	display:none;
+	position:relative;
+	padding:20px;
+	color:#fff;
+	background:#4796dc;
+}
+.message-panel.active{display:block;}
+.close{
+	position:absolute;
+	right:0;
+	top:0;
+	width:22px;
+	height:22px;
+	font-size:17px;
+	line-height:19px;
+	font-weight:bold;
+	color:#fff;
+	text-align:center;
+	cursor:pointer;
+	background:#333;
+}
+.close:hover{
+	color:#fff;
+	opacity:1;
+}
+#main{display:table-row;}
+.main-holder{
+	display:table-cell;
+	position:relative;
+	vertical-align:top;
+}
+.add-layout{
+	display:block;
+	height:100%;
+}
+.layout-container{
+	position:absolute;
+	z-index:1;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	padding:10px 5px;
+	background:#eef;
+}
+.left-column{
+	float:left;
+	width:200px;
+	height:100%;
+	background:#efe;
+}
+.blocks-holder{
+	position:relative;
+	height:100%;
+	background:#fff;
+}
+.block-cell{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:40%;
+	overflow:hidden;
+}
+.resizable-block{
+	min-height:10%;
+	max-height:90%;
+}
+.block-cell.bottom-block{
+	top:auto;
+	bottom:0;
+	height:60%;
+}
+.block-cell .holder{
+	padding:0 0 10px;
+}
+.ui-resizable-s{
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:10px;
+	border:solid #e1e1e1;
+	border-width:1px 0;
+	background:#ececec;
+	cursor:s-resize;
+}
+.ui-resizable-s:after{
+	position:absolute;
+	content:"";
+	left:50%;
+	top:2px;
+	width:30px;
+	height:5px;
+	margin-left:-15px;
+	border:solid #bbb;
+	border-width:1px 0;
+	-webkit-box-shadow:0 1px 0 #ececec inset, 0 -1px 0 #ececec inset;
+	box-shadow:0 1px 0 #ececec inset, 0 -1px 0 #ececec inset;
+	background:#bbb;
+}
+.resize-active .ui-resizable-s,
+.ui-resizable-s:hover{
+	background:#f6f6f6;
+}
+.panel-group{
+	margin:0;
+	padding:5px;
+}
+.panel-heading{
+	padding:5px;
+}
+.panel-title{
+	font-size:13px;
+}
+.right-column{
+	position:relative;
+	float:right;
+	width:300px;
+	height:100%;
+	padding:42px 0 0;
+	background:#efe;
+}
+.right-column>.nav-tabs{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+}
+.right-column .tab-pane,
+.right-column .tab-content{
+	height:100%;
+}
+.right-column .tab-content{position:relative;}
+.right-column .tab-pane{
+	display:block;
+	position:absolute;
+	left:-9999px;
+	top:0;
+	width:100%;
+}
+.right-column .tab-pane.active{
+	position:relative;
+	left:auto;
+	top:auto;
+}
+.right-column .holder{
+	padding:10px;
+}
+.behavior-section{
+	display:table;
+	table-layout:fixed;
+	width:100%;
+	height:100%;
+	border-collapse:collapse;
+}
+.behavior-top{
+	display:table-header-group;
+	height:1%;
+}
+.behavior-content{
+	display:table-row;
+}
+.behavior-holder{
+	display:table-cell;
+	position:relative;
+	vertical-align:top;
+}
+.behavior-frame{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:auto;
+	background:#fee;
+}
+.right-column h4{
+	margin:0 0 10px;
+	font-size:20px;
+	line-height:24px;
+}
+.content-column{
+	height:100%;
+	overflow:hidden;
+}
+.content-column .jcf-scrollable-wrapper{
+	height:100% !important;
+}
+.content-container{
+	max-width:800px;
+	margin:0 auto;
+	background:#fff;
+}
+#footer{
+	display:table-footer-group;
+	height:1%;
+}
+.footer-holder{
+	padding:5px;
+}
+
+/* custom scrollbars styles */
+.jcf-scrollable-wrapper {
+	box-sizing: content-box;
+	position: relative;
+	width:100% !important;
+}
+.jcf-scrollable{
+	width:100% !important;
+	height:100%;
+	overflow:auto;
+	padding:0 12px 0 0;
+}
+.jcf-scrollbar-vertical {
+	position: absolute;
+	cursor: default;
+	background: transparent;
+	width: 12px;
+	bottom: 0;
+	right: 0;
+	top: 0;
+}
+.jcf-scrollbar-vertical .jcf-scrollbar-dec,
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+	background: #fff;
+	height: 0;
+	width: 12px;
+	left: 0;
+	top: 0;
+}
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+	top: auto;
+	bottom: 0;
+}
+.jcf-scrollbar-vertical .jcf-scrollbar-handle {
+	background: #b2b2b2;
+	height: 1px;
+	width: 12px;
+	min-height:12px;
+}
+.jcf-scrollbar-horizontal {
+	position: absolute;
+	background: #e3e3e3;
+	right: auto;
+	top: auto;
+	left: 0;
+	bottom: 0;
+	width: 1px;
+	height: 12px;
+}
+.jcf-scrollbar-horizontal .jcf-scrollbar-dec,
+.jcf-scrollbar-horizontal .jcf-scrollbar-inc {
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+	background: #bbb;
+	height: 12px;
+	width: 12px;
+}
+.jcf-scrollbar-horizontal .jcf-scrollbar-inc {
+	left: auto;
+	right: 0;
+}
+.jcf-scrollbar-horizontal .jcf-scrollbar-slider {
+	display: inline-block;
+	position: relative;
+	height: 12px;
+}
+.jcf-scrollbar-horizontal .jcf-scrollbar-handle {
+	position: absolute;
+	background: #b2b2b2;
+	height: 12px;
+}
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-handle {
+	visibility: hidden;
+}
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-dec, 
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-inc {
+	background: #e3e3e3;
+}
+/* common custom form elements styles */
+.jcf-disabled {background: #ddd !important;}
+.jcf-focus, .jcf-focus * {border-color: #f00 !important;}
